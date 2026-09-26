@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:gravity="center_horizontal"
+    android:background="#FFFFFF">
+
+    <!-- Título -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CRUD Universidades"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#1A237E"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Campo ID -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ID Universidad *"
+            android:textSize="16sp"
+            android:textColor="#000000" />
+
+        <EditText
+            android:id="@+id/campoId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ej: U001"
+            android:inputType="textCapCharacters"
+            android:background="@android:drawable/editbox_background"
+            android:padding="10dp" />
+    </LinearLayout>
+
+    <!-- Campo Nombre -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre *"
+            android:textSize="16sp"
+            android:textColor="#000000" />
+
+        <EditText
+            android:id="@+id/campoNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre de la universidad"
+            android:inputType="textCapWords"
+            android:background="@android:drawable/editbox_background"
+            android:padding="10dp" />
+    </LinearLayout>
+
+    <!-- Campo Web -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Página Web"
+            android:textSize="16sp"
+            android:textColor="#000000" />
+
+        <EditText
+            android:id="@+id/campoWww"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="www.ejemplo.edu.co"
+            android:inputType="textUri"
+            android:background="@android:drawable/editbox_background"
+            android:padding="10dp" />
+    </LinearLayout>
+
+    <!-- Botones CRUD - Fila 1 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/btnAgregar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="5dp"
+            android:text="Agregar"
+            android:onClick="agregarUniversidad"
+            android:backgroundTint="#1A237E"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnBuscar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:text="Buscar"
+            android:onClick="buscarUniversidad"
+            android:backgroundTint="#1A237E"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <!-- Botones CRUD - Fila 2 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/btnModificar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="5dp"
+            android:text="Modificar"
+            android:onClick="modificarUniversidad"
+            android:backgroundTint="#1A237E"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnEliminar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:text="Eliminar"
+            android:onClick="eliminarUniversidad"
+            android:backgroundTint="#1A237E"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <!-- Botones CRUD - Fila 3 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/btnListar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="5dp"
+            android:text="Listar"
+            android:onClick="listarUniversidades"
+            android:backgroundTint="#1A237E"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnLimpiar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="5dp"
+            android:text="Limpiar"
+            android:onClick="limpiarCampos"
+            android:backgroundTint="#1A237E"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <!-- Botón Regresar -->
+    <Button
+        android:id="@+id/btnRegresarCrudUniversidad"
+        android:layout_width="116dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:backgroundTint="#1A237E"
+        android:text="Regresar"
+        android:textColor="#FFFFFF"
+        android:onClick="regresar" />
+
+</LinearLayout>
